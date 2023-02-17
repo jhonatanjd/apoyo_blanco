@@ -1,0 +1,70 @@
+{% load static %}
+ <div class="container-fluid p-6  my-6 border">
+  <img src='{% static "IMAGES/En1.jpg"  %}' width="1310px" height="200px">
+</div>
+
+<strong>
+<nav class="navbar navbar-expand-lg navbar--success bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'trabajar' %}">¿quieres trabajar con nosotros?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'ayuda' %}">Ayuda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'quien' %}">Quienes Somos</a>
+        </li>
+    
+        {% if productor.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'rol_registro' %}">Crea tu cuenta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Salir</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'rol_registro' %}">Crea tu cuenta</a>
+        </li>
+        
+        {% endif %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ¿Que profesional buscas?
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'Cardiología' %}">Cardiología</a></li>
+            <li><a class="dropdown-item" href="{% url 'Urgencias' %}">Urgencias</a></li>
+            <li><a class="dropdown-item" href="{% url 'Enfermería de familia' %}">Enfermería de familia</a></li>
+            <li><a class="dropdown-item" href="{% url 'Geriatría' %}">Geriatría</a></li>
+            <li><a class="dropdown-item" href="{% url 'Neonatología' %}">Neonatología</a></li>
+            <li><a class="dropdown-item" href="{% url 'Nefrología' %}">Nefrología</a></li>
+            <li><a class="dropdown-item" href="{% url 'Oncología' %}">Oncología</a></li>
+            <li><a class="dropdown-item" href="{% url 'Pediatría' %}">Pediatría</a></li>
+            <li><a class="dropdown-item" href="{% url 'Atención primaria' %}">Atención primaria</a></li>
+            <li><a class="dropdown-item" href="{% url 'Salud escolar' %}">Salud escolar</a></li>
+            <li><a class="dropdown-item" href="{% url 'Salud de la mujer' %}">Salud de la mujer</a></li>
+          </ul>
+        </li><hr>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'rol' %}">Ingresa aqui</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+</strong>
