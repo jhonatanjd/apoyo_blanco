@@ -1,15 +1,47 @@
-from django import forms
-from .models import *
-#from django.forms import ModelForm
-#from .models import tabla_prueba, driver, client, producer
-#from django.db import model
-#from django.forms import ModelForm
+CIUDADS ={
+    ('bogota','bogota'),
+    ('medellin','medellin'),
+    ('cali','cali'),
+    ('boyaca','boyaca'),
+    ('cucuta','cucuta'),
+    ('leticia','leticia'),
+    ('rionegro','rionegro'),
+    ('apartado','apartado'),
+    ('turbo','turbo'),
+    ('caucasia','caucasia'),
+    ('arauca','arauca'),
+    ('barranquilla','barranquilla'),
+    ('sabanalarga','sabanalarga'),
+    ('girardot','girardot'),
+    ('fusagasuga','fusagasuga'),
+    ('zipaquira','zipaquira'),
+    ('facatativa','facatativa'),
+    ('cartagena','cartagena'),
+    ('magangue','magangue'),
+    ('el carmen de bolivar','el carmen de bolivar'),
+    ('tunja','tunja')
+    }
 
+GRADO ={
+    ('tecnico','tecnico'),
+    ('tecnologo','tecnologo'),
+    ('profesional','profesional'),
+    ('Especialización_tecnica','Especialización_tecnica'),
+    ('Especialización_tecnologica','Especialización_tecnologica'),
+    ('Especialización_profesional','Especialización_profesional'),
+    
+    }
 
-
-
-
-class form_soporte(forms.ModelForm):
-    class Meta:
-        model = soporte
-        fields = '__all__'
+ESPE ={
+    ('Atención_primaria','Atención_primaria'),
+    ('Cardiología','Cardiología'),
+    ('Enfermería_de_familia','Enfermería_de_familia'),
+    ('Geriatría','Geriatría'),
+    ('Nefrología','Nefrología'),
+    ('Neonatología','Neonatología'),
+    ('Oncología','Oncología'),
+    ('Pediatría','Pediatría'),
+    ('Salud_de_la_mujer','Salud_de_la_mujer'),
+    ('Salud_escolar','Salud_escolar'),
+    ('Urgencias','Urgencias'),
+    }    

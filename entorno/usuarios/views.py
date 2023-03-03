@@ -1,12 +1,12 @@
 from django.shortcuts import render
 
 from django.shortcuts import render
-#from django.contrib import messages
-#from django.contrib.auth.hashers import make_password, check_password
-#from usuarios.forms import *
+from django.contrib import messages
+from django.contrib.auth.hashers import make_password, check_password
+from .forms import *
 #from usuarios.models import *
-#from django.contrib.auth.decorators import login_required
-#from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 #from .models import frutas
 #from usuarios.models import frutas
 def Home (request):
@@ -51,16 +51,25 @@ def escolar (request):
 def mujer (request):
     return render(request, 'mujer.html')
 
-def rol (request):
+def rol_registro (request):
     return render(request, 'rol.html')
+
+def rol_logueo (request):
+    return render(request, 'rol_logueo.html')
+
+def terminos (request):
+    return render(request, 'terminos.html')
 
 def registro_usuario (request):
     return render(request, 'registro_usuario.html')
 
+def trabajar (request):
+    return render(request, 'trabajar.html')
+
 def registro_profesional (request):
     return render(request, 'registro_profesional.html')
 
-def validacion(request):
+def validacion_cliente(request):
     if request.method == 'POST':
         user=request.POST.get('username')
         passw=request.POST.get('password')
@@ -78,6 +87,35 @@ def validacion(request):
             messages.error(request,'usuario o contraseña erronena')
             return render(request,'logueo_cliente.html') 
 
+def validacion_profesional(request):
+    if request.method == 'POST':
+        corre=request.POST.get('correo')
+        passw=request.POST.get('password')
+
+        if cliente.objects.filter(correo=corre).exists():
+            logueo=cliente.objects.get(correo=corre)
+            passw=check_password(passw,logueo.password)
+            if passw ==False:
+                messages.error(request,'usuario o contraseña erronea')
+                return render(request,'logueo.html')
+            else:
+                request.session['seguridad']=True
+                return render (request, 'profesional.html')
+        else: 
+            messages.error(request,'usuario o contraseña erronena')
+            return render(request,'logueo_profesional.html') 
+def cliente (request):
+    return render(request, 'cliente.html')
+
+def profesional (request):
+    return render(request, 'profesional.html')
+
+def logueo_cliente (request):
+    return render (request, 'logueo.html') 
+
+def logueo_profesional (request):
+    return render (request, 'logueo_profesional.html') 
+
 def soporte (request):
     if request.method == 'POST':
         form = form_soporte(request.POST)
@@ -92,3 +130,6 @@ def soporte (request):
     else:
         form = form_soporte() 
     return render (request,"ayuda.html",{'form': form})
+
+
+

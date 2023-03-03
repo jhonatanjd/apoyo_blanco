@@ -14,15 +14,15 @@
     <div class="card">
         <div class="card-body">
             
-            <form method="post" action="/validacion_cliente/" >
+            <form method="post" action="/validacion_profesional/" >
             {% csrf_token %}
-            <input type="text" name="username" class="form-control" placeholder="digita tu username"><br><br>
+            <input type="text" name="correo" class="form-control" placeholder="digita tu correo"><br><br>
             <input type="password" name="password" class="form-control" placeholder="digite tu contraseña"><br><br>
             <button type="submit" class="btn bts-sm btn-warning">Ingresar</button>    
             </form>
 
     
-            <p>¿no tienes cuenta?<a class="link" href="{% url 'registro_usuario' %}"> registrate</a></p>
+            <p>¿no tienes cuenta?<a class="link" href="{% url 'registro_profesional' %}"> registrate</a></p>
             <p>al registrarte, aceptas nuestras condiciones de uso y políticas de privacidad.</p>
         </div>
     </div>

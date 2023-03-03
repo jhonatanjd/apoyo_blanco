@@ -23,7 +23,7 @@
           <a class="nav-link" href="{% url 'ayuda' %}">Ayuda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'quien' %}">Quienes Somos</a>
+          <a class="nav-link" href="{% url 'quienes' %}">Quienes Somos</a>
         </li>
     
         {% if productor.is_authenticated %}
@@ -44,23 +44,24 @@
             ¿Que profesional buscas?
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'primaria' %}">Atención primaria</a></li>
             <li><a class="dropdown-item" href="{% url 'Cardiología' %}">Cardiología</a></li>
-            <li><a class="dropdown-item" href="{% url 'Urgencias' %}">Urgencias</a></li>
-            <li><a class="dropdown-item" href="{% url 'Enfermería de familia' %}">Enfermería de familia</a></li>
+            <li><a class="dropdown-item" href="{% url 'familia' %}">Enfermería de familia</a></li>
             <li><a class="dropdown-item" href="{% url 'Geriatría' %}">Geriatría</a></li>
-            <li><a class="dropdown-item" href="{% url 'Neonatología' %}">Neonatología</a></li>
             <li><a class="dropdown-item" href="{% url 'Nefrología' %}">Nefrología</a></li>
+            <li><a class="dropdown-item" href="{% url 'Neonatología' %}">Neonatología</a></li>
             <li><a class="dropdown-item" href="{% url 'Oncología' %}">Oncología</a></li>
             <li><a class="dropdown-item" href="{% url 'Pediatría' %}">Pediatría</a></li>
-            <li><a class="dropdown-item" href="{% url 'Atención primaria' %}">Atención primaria</a></li>
-            <li><a class="dropdown-item" href="{% url 'Salud escolar' %}">Salud escolar</a></li>
-            <li><a class="dropdown-item" href="{% url 'Salud de la mujer' %}">Salud de la mujer</a></li>
+            <li><a class="dropdown-item" href="{% url 'mujer' %}">Salud de la mujer</a></li>
+            <li><a class="dropdown-item" href="{% url 'escolar' %}">Salud escolar</a></li>
+            <li><a class="dropdown-item" href="{% url 'Urgencias' %}">Urgencias</a></li>
+            
           </ul>
         </li><hr>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'rol' %}">Ingresa aqui</a>
+          <a class="nav-link" href="{% url 'rol_logueo' %}">iniciar sesión</a>
         </li>
       </ul>
       

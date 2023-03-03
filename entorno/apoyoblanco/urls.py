@@ -21,7 +21,15 @@ urlpatterns = [
     path('primaria',primaria, name="primaria"),
     path('escolar',escolar, name="escolar"),
     path('mujer',mujer, name="mujer"),
-    path('rol',rol, name="rol"),
-    path('rergistro_usuario',registro_usuario, name="rergistro_usuario"),
+    path('cliente',cliente, name="cliente"),
+    path('profesional',profesional, name="profesional"),
+    path('terminos',terminos, name="terminos"),
+    path('rol_registro',rol_registro, name="rol_registro"),
+    path('rol_logueo',rol_logueo, name="rol_logueo"),
+    path('rergistro_usuario',registro_usuario, name="registro_usuario"),
     path('registro_profesional',registro_profesional, name="registro_profesional"),
+    path('logueo_cliente',logueo_cliente, name="logueo_cliente"),
+    path('logueo_profesional',logueo_profesional, name="logueo_profesional"),
+
+
 ]
