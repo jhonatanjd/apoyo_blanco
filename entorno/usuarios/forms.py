@@ -10,7 +10,7 @@ class form_soporte(forms.ModelForm):
         model = soporte
         fields = '__all__'
 
-class registro_usuario(forms.ModelForm):
+class registro_usuarios(forms.ModelForm):
     class Meta:
         model = cliente
         fields = '__all__'

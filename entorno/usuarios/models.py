@@ -1,6 +1,6 @@
 from django.db import models
 from .choices import *
-
+from pyexpat import model
 class soporte(models.Model):
     correo = models.CharField(max_length=50)
     comentario = models.CharField(max_length=500)        
@@ -15,7 +15,7 @@ class cliente(models.Model):
     nombres = models.CharField(max_length=100)
     apellidos = models.CharField(max_length=100)
     cedula = models.CharField(max_length=10, unique=True) 
-    direcion = models.CharField(max_length=100)
+    direccion = models.CharField(max_length=100)
     telefono = models.CharField(max_length=10)
     celular = models.CharField(max_length=10, unique=True)
     correo = models.EmailField(max_length=100, unique=True)

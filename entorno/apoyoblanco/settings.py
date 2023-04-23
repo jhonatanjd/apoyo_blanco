@@ -65,7 +65,7 @@ WSGI_APPLICATION = 'apoyoblanco.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'apoyo',
         'USER': 'root',
         'PASSWORD': 'admin',
